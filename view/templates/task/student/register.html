@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>점수 입력하기</title>
+    <style>
+        .wrap {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label, input, button {
+            width: 300px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="{% url 'student-register' %}" name="register-form">
+        <div class="wrap">
+            <label for="number">번호</label>
+            <input id="number" type="number" name="number" placeholder="번호를 입력하세요.">
+            <label for="korean">국어</label>
+            <input id="korean" type="text" name="korean" placeholder="국어 점수를 입력하세요.">
+            <label for="english">영어</label>
+            <input id="english" type="text" name="english" placeholder="영어 점수를 입력하세요.">
+            <label for="math">수학</label>
+            <input id="math" type="text" name="math" placeholder="수학 점수를 입력하세요.">
+            <button>완료</button>
+        </div>
+    </form>
+</body>
+</html>

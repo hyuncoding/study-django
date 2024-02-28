@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>점수 입력하기</title>
+    <style>
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        label, input {
+            width: 300px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        button {
+            width: 350px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <form action="{% url 'member-register' %}" name="register-form">
+        {% csrf_token %}
+        <div class="wrap">
+            <label for="name">이름</label>
+            <input id="name" type="text" name="name" placeholder="이름을 입력하세요.">
+            <label for="age">나이</label>
+            <input id="age" type="text" name="age" placeholder="나이를 입력하세요.">
+            <button>완료</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>정보 입력</title>
+    <style>
+        .wrap {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label, input, button {
+            width: 300px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="{% url 'num-register' %}" name="register-form">
+        <div class="wrap">
+            <label for="number">숫자 입력</label>
+            <input id="number" type="number" name="number" placeholder="숫자를 입력하세요!">
+            <button>완료</button>
+        </div>
+    </form>
+</body>
+</html>
